@@ -1,0 +1,56 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
+    margin: 1; /* Remove a margem padrão */
+    padding: 1; /* Remove o preenchimento padrão */
+    background-color: #f4f4f4; /* Define a cor de fundo */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #333; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    padding: 20px; /* Adiciona preenchimento ao redor do conteúdo */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos da navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens da lista em linha */
+    margin: 0 15px; /* Adiciona margem à esquerda e à direita dos itens */
+}
+
+nav ul li a {
+    color: white; /* Define a cor do texto dos links */
+    text-decoration: none; /* Remove a sublinha dos links */
+}
+
+/* Estilos das seções */
+section {
+    padding: 20px; /* Adiciona preenchimento ao redor do conteúdo */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos dos projetos */
+.projeto {
+    background-color: white; /* Define a cor de fundo */
+    padding: 15px; /* Adiciona preenchimento ao redor do conteúdo */
+    margin: 10px auto; /* Adiciona margem acima e abaixo, e centraliza horizontalmente */
+    width: 80%; /* Define a largura */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor do elemento */
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Adiciona preenchimento ao redor do conteúdo */
+    margin-top: 20px; /* Adiciona margem acima do rodapé */
+}
