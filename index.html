@@ -21,7 +21,7 @@
     </header>
     
     <!-- Seção Sobre Mim -->
-    <section id="sobre">
+    <section id="sobre" class="reveal">
         <h2>Sobre Mim</h2> <!-- Título da seção -->
         <p style="text-align: justify;">Profissional com mais de vinte anos de experiência em gestão imobiliária, administrativa, financeira e suporte tecnológico, atuando em instituições renomadas, como a Caixa Econômica e a Secretaria do Trabalho.
             Possuo forte adaptabilidade e um conjunto diversificado de competências, incluindo exploração e análise de dados (estatísticas, gráficos, padrões), desenvolvimento de planilhas avançadas, dashboards, relatórios, elaboração e organização de documentos, além da otimização de processos internos.
@@ -31,7 +31,7 @@
     </section>
     
     <!-- Seção Meus Projetos -->
-    <section id="projetos">
+    <section id="projetos" class="reveal">
         <h2>Meus Projetos</h2> <!-- Título da seção -->
         <div class="projeto">
             <h3>Projeto 1</h3> <!-- Título do projeto -->
@@ -66,7 +66,7 @@
                 O objetivo desta landing page é fornecer informações sobre a clínica médica, seus serviços e equipe, além de facilitar o contato com os pacientes e a marcação de consultas.</p> <!-- Descrição do projeto -->
         </div>
     </section>
-    
+
     <!-- Seção Contato -->
     <section id="contato">
         <h2>Contato</h2> <!-- Título da seção -->
@@ -78,5 +78,40 @@
     <footer>
         <p>&copy; 2025 George Alberto - Todos os direitos reservados.</p> <!-- Texto do rodapé -->
     </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        function revealElements() {
+            let elements = document.querySelectorAll('.reveal');
+            let windowHeight = window.innerHeight;
+    
+            elements.forEach(element => {
+                let elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    element.classList.add('active');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', revealElements);
+        revealElements(); // Chama a função ao carregar a página
+    </script>
+
 </body>
 </html>
