@@ -15,6 +15,17 @@ header {
     text-align: center; /* Centraliza o texto */
 }
 
+.reveal {
+    opacity: 0; /* Define a opacidade inicial como 0 (invisível) */
+    transform: translateY(20px); /* Move o elemento 20 pixels para baixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Define a transição suave para opacidade e transformação */
+}
+
+.reveal.active {
+    opacity: 1; /* Define a opacidade como 1 (visível) */
+    transform: translateY(0); /* Move o elemento para a posição original */
+}
+
 /* Estilos da navegação */
 nav ul {
     list-style: none; /* Remove os marcadores da lista */
