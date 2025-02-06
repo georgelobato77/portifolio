@@ -65,3 +65,34 @@ footer {
     padding: 10px; /* Adiciona preenchimento ao redor do conteúdo */
     margin-top: 20px; /* Adiciona margem acima do rodapé */
 }
+
+/* Ajuste para telas menores */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
