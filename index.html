@@ -79,37 +79,39 @@
         <p>&copy; 2025 George Alberto - Todos os direitos reservados.</p> <!-- Texto do rodapé -->
     </footer>
 
+    <!-- Script para rolagem suave -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+                e.preventDefault(); // Previne o comportamento padrão do link
+                const targetId = this.getAttribute('href').substring(1); // Obtém o ID do alvo
+                const targetElement = document.getElementById(targetId); // Encontra o elemento alvo
     
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 20,
-                        behavior: 'smooth'
+                        top: targetElement.offsetTop - 20, // Rola até o elemento alvo com um deslocamento de 20 pixels
+                        behavior: 'smooth' // Define a rolagem suave
                     });
                 }
             });
         });
     </script>
     
+    <!-- Script para revelar elementos ao rolar a página -->
     <script>
         function revealElements() {
-            let elements = document.querySelectorAll('.reveal');
-            let windowHeight = window.innerHeight;
+            let elements = document.querySelectorAll('.reveal'); // Seleciona todos os elementos com a classe 'reveal'
+            let windowHeight = window.innerHeight; // Obtém a altura da janela
     
             elements.forEach(element => {
-                let elementTop = element.getBoundingClientRect().top;
-                if (elementTop < windowHeight - 50) {
-                    element.classList.add('active');
+                let elementTop = element.getBoundingClientRect().top; // Obtém a posição do topo do elemento
+                if (elementTop < windowHeight - 50) { // Verifica se o elemento está visível na janela
+                    element.classList.add('active'); // Adiciona a classe 'active' ao elemento
                 }
             });
         }
     
-        window.addEventListener('scroll', revealElements);
+        window.addEventListener('scroll', revealElements); // Adiciona um evento de rolagem para chamar a função revealElements
         revealElements(); // Chama a função ao carregar a página
     </script>
 
